@@ -33,7 +33,7 @@
 
 # 📖 [OOP Ruby School Library ] <a name="about-project"></a>
 
-> ## **[OOP Ruby School Library]** :- Simple ruby program that build a school library using the oriented object approach. The library keeps records of all the books and the students and teachers who borrowed them
+> ## **[OOP Ruby School Library]** :- Simple ruby program that build a school library using the oriented object approach. The library keeps records of all the books and the students and teachers who borrowed them and besides it was added Ruby decorators that help to add behaviours to objects without affecting other objects of the same class.
 
 ## 🛠 Built With <a name="built-with"></a>
 

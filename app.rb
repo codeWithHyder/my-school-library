@@ -64,7 +64,7 @@ class App
       print 'Please input Y or N: '
       parent_permission = gets.chomp.downcase
     end
-    student = Student.new(age, name, classroom) if parent_permission == 'y'
+    student = Student.new(age, name, classroom, parent_permission: true) if parent_permission == 'y'
     student = Student.new(age, name, classroom, parent_permission: false) if parent_permission == 'n'
     @persons << student
     puts 'Student successfully created'

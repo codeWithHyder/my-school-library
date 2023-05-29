@@ -33,7 +33,7 @@
 
 # 📖 [OOP Ruby School Library ] <a name="about-project"></a>
 
-> ## **[OOP Ruby School Library]** :- Simple ruby program that build a school library using the oriented object approach. The library keeps records of all the books and the students and teachers who borrowed them and besides it was added Ruby decorators that help to add behaviours to objects without affecting other objects of the same class.
+> ## **[OOP Ruby School Library]** :- Simple ruby program that build a school library using the oriented object approach. The library keeps records of all the books and the students and teachers who borrowed them and besides it was added Ruby decorators that help to add behaviours to objects without affecting other objects of the same class. Besides We refactored the OOP School Library to follow SOLID
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -137,6 +137,13 @@ ruby filename.rb
 - GitHub: [@codeWithHyder](https://github.com/codeWithHyder)
 - Twitter: [@Hyder](https://twitter.com/@hyder3512)
 - LinkedIn: [@Hyder](https://www.linkedin.com/in/ghulam-hyder-dar/)
+
+
+## <a> 👤 Reem Muhammad </a>
+
+- GitHub: [@github](https://github.com/ReemMohamedAbdelfatah)
+- Twitter: [@Twitter](https://twitter.com/ReemMoh67016126)
+- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/reemmuhammad/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

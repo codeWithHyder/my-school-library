@@ -1,7 +1,6 @@
 require_relative('../book')
 require_relative('handle_data')
 
-
 module AddBook
   include SaveData
   def add_book

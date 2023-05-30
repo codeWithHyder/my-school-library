@@ -23,7 +23,7 @@ class App
     @rentals = []
   end
 
-  def run_app
+  def run
     loop do
       display_menu_options
       option = gets.chomp.to_i

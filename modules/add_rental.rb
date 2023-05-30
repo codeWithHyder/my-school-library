@@ -1,4 +1,4 @@
-require_relative('../rental')
+require_relative('../rentable')
 require 'date'
 
 module AddRental

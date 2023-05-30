@@ -1,7 +1,10 @@
 require_relative('../teacher')
 require_relative('../student')
+require_relative('./handle_data')
 
 module CreatePerson
+  include SaveData
+
   def add_person
     print 'Do you want to create a student (1) or a teacher (2)? [input the number]: '
     person_type = gets.chomp
@@ -14,6 +17,7 @@ module CreatePerson
     else
       add_teacher
     end
+    save_persons
   end
 
   def add_teacher
@@ -23,7 +27,7 @@ module CreatePerson
     name = gets.chomp.capitalize
     print 'Specialization: '
     specialization = gets.chomp.capitalize
-    person = Teacher.new(age, specialization, name)
+    person = Teacher.new(age, name, specialization)
     @persons << person
     puts 'Teacher successfully created'
   end
@@ -41,7 +45,7 @@ module CreatePerson
       print 'Please input Y or N: '
       parent_permission = gets.chomp.downcase
     end
-    student = Student.new(age, name, classroom) if parent_permission == 'y'
+    student = Student.new(age, name, classroom, parent_permission: true) if parent_permission == 'y'
     student = Student.new(age, name, classroom, parent_permission: false) if parent_permission == 'n'
     @persons << student
     puts 'Student successfully created'

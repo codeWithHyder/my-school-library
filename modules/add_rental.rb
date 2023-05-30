@@ -1,7 +1,10 @@
 require_relative('../rentable')
+require_relative './handle_data'
 require 'date'
 
 module AddRental
+  include SaveData
+
   def print_books_by_index
     @books.each_with_index do |book, index|
       puts "#{index}) Title: #{book.title}, Author: #{book.author}"
@@ -53,6 +56,25 @@ module AddRental
     "#{month}/#{day}/#{year}"
   end
 
+  def create_rental(book, person, date)
+    rental = {
+      date: date,
+      id: person.id,
+      name: person.name,
+      age: person.age,
+      parent_permission: person.parent_permission,
+      type: person.type,
+      title: book.title,
+      author: book.author
+    }
+    if person.type == 'Teacher'
+      rental[:specialization] = person.specialization
+    else
+      rental[:classroom] = person.classroom
+    end
+    rental
+  end
+
   def add_rental
     if @books.empty?
       puts 'There are no books available'
@@ -66,8 +88,9 @@ module AddRental
     book = select_book_to_rent
     person = select_person_to_rent
     date = input_date
-    rental = Rental.new(date, person, book)
+    rental = create_rental(book, person, date)
     @rentals << rental
     puts 'Rental created successfully'
+    save_rentals
   end
 end

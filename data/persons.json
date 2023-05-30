@@ -1,0 +1,24 @@
+[
+  {
+    "id": 810,
+    "name": "Zeeshan ali",
+    "age": 23,
+    "parent_permission": true,
+    "rentals": [
+
+    ],
+    "type": "student",
+    "classroom": "12"
+  },
+  {
+    "id": 46,
+    "name": "Danish",
+    "age": 35,
+    "parent_permission": true,
+    "rentals": [
+
+    ],
+    "type": "Teacher",
+    "specialization": "Web"
+  }
+]

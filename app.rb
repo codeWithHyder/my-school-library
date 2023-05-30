@@ -4,7 +4,7 @@ require_relative './modules/add_book'
 require_relative './modules/add_person'
 require_relative './modules/add_rental'
 require_relative './modules/list_rentals'
-
+require_relative './modules//handle_data'
 require_relative './modules/display_menu_options'
 
 class App
@@ -15,15 +15,18 @@ class App
   include AddRental
   include ListAllRentals
   include DisplayMenu
+  include HandleData
   attr_accessor :persons, :books, :rentals
 
   def initialize
-    @persons = []
-    @books = []
-    @rentals = []
+    check_data_files
+    @persons = load_persons
+    @books = load_books
+    @rentals = load_rentals
   end
 
   def run
+    #  puts @rentals
     loop do
       display_menu_options
       option = gets.chomp.to_i

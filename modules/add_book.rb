@@ -1,6 +1,8 @@
 require_relative('../book')
+require_relative('handle_data')
 
 module AddBook
+  include SaveData
   def add_book
     puts 'What is the title of the book?'
     title = gets.chomp
@@ -9,5 +11,6 @@ module AddBook
     book = Book.new(title, author)
     @books << book
     puts 'Book successfully created'
+    save_books
   end
 end
